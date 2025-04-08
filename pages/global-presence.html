@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Swiss Metal Trading's global presence with operations spanning Africa, South America, North America, Europe, the Middle East, and Asia.">
+    <title>Swiss Metal Commodity Trading | Global Presence</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Leaflet CSS for interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.png" alt="Swiss Metal Trading" height="40">
+                Swiss Metal Trading
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="operations.html">Operations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products & Commodities</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="global-presence.html">Global Presence <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="lang-switcher ml-3">
+                    <a href="#" class="active">EN</a>
+                    <a href="#">FR</a>
+                    <a href="#">ES</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-image: url('../images/global-header.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Global Presence</h1>
+                    <p class="lead">Discover our worldwide operations spanning from metal-producing regions in Africa and South America to distribution networks across North America, Europe, the Middle East, and Asia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Global Map -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Global Network</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto mb-5">
+                    <p class="text-center">Swiss Metal Trading operates a comprehensive global network that connects metal-producing regions with markets worldwide. From our headquarters in Geneva, Switzerland, we coordinate operations across six continents, ensuring efficient sourcing, logistics, and distribution of metal commodities.</p>
+                </div>
+            </div>
+            <div class="global-map" id="worldMap" style="height: 500px;"></div>
+            <div class="row mt-4">
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="map-legend">
+                        <i class="fas fa-circle text-success"></i>
+                        <span>Headquarters</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="map-legend">
+                        <i class="fas fa-circle text-primary"></i>
+                        <span>Sourcing Regions</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="map-legend">
+                        <i class="fas fa-circle text-warning"></i>
+                        <span>Distribution Hubs</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="map-legend">
+                        <i class="fas fa-circle text-danger"></i>
+                        <span>Regional Offices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origination Regions -->
+    <section id="africa" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Metal Origination Regions</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto mb-5">
+                    <p class="text-center">Our metal origination operations focus on key producing regions in Africa and South America, where we work directly with miners, processors, and local partners to secure high-quality metal commodities while ensuring responsible sourcing practices.</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h3>Africa</h3>
+                    <p>Africa represents a critical sourcing region for Swiss Metal Trading, with rich deposits of copper, cobalt, bauxite, manganese, and other valuable metals. Our African operations are centered on:</p>
+                    
+                    <div class="commodity-item">
+                        <h4>Democratic Republic of Congo</h4>
+                        <p>A major source of copper and cobalt, where we maintain strategic partnerships with established mining operations. Our local team ensures compliance with responsible sourcing standards and quality control protocols.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Zambia</h4>
+                        <p>An important copper-producing country where we work with both large-scale mining companies and medium-sized operations to secure high-grade copper for global markets.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Guinea</h4>
+                        <p>Home to some of the world's largest bauxite reserves, where we source raw materials for aluminum production through established partnerships with mining companies.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>South Africa</h4>
+                        <p>A diverse mining jurisdiction where we source manganese, chrome, and other metals through long-term supply agreements with leading producers.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Ghana</h4>
+                        <p>An emerging source for various metals, where we are developing new partnerships to expand our sourcing portfolio.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/africa-mining.jpg" alt="Mining Operations in Africa" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            
+            <div id="south-america" class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <h3>South America</h3>
+                    <p>South America is a cornerstone of our sourcing strategy, with its rich mineral resources and established mining infrastructure. Our South American operations focus on:</p>
+                    
+                    <div class="commodity-item">
+                        <h4>Chile</h4>
+                        <p>The world's largest copper producer, where we maintain strategic relationships with major mining companies to secure premium copper cathodes and concentrates for global distribution.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Peru</h4>
+                        <p>A significant producer of copper, zinc, and other metals, where our local team works with established mining operations to source high-quality products that meet international standards.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Bolivia</h4>
+                        <p>An important source of zinc and other metals, where we have developed relationships with key producers to secure reliable supply for our distribution network.</p>
+                    </div>
+                    
+                    <div class="commodity-item">
+                        <h4>Brazil</h4>
+                        <p>A diverse mining jurisdiction where we source bauxite for aluminum production and other metal commodities through established partnerships.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="../images/south-america-mining.jpg" alt="Mining Operations in South America" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distribution Networks -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Global Distribution Networks</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto mb-5">
+                    <p class="text-center">From our strategic hub in Geneva, Switzerland, we coordinate the distribution of metal commodities to markets worldwide. Our extensive distribution network spans North America, Europe, the Middle East, and Asia, ensuring efficient delivery and responsive service to our clients.</p>
+                </div>
+            </div>
+            
+            <div id="north-america" class="row mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">North America</h3>
+                            <p>Our North American distribution network serves manufacturing clients across the United States and Canada, with a focus on:</p>
+                            <ul>
+                                <li><strong>Key Markets:</strong> Automotive manufacturing, construction, electronics, aerospace</li>
+                                <li><strong>Distribution Hubs:</strong> Chicago, Houston</li>
+                                <li><strong>Logistics Infrastructure:</strong> Rail connections, port facilities, warehousing</li>
+                                <li><strong>Client Base:</strong> Major manufacturers, metal service centers, industrial conglomerates</li>
+                            </ul>
+                            <p>Through our North American operations, we provide reliable supply of copper, aluminum, zinc, nickel, and other metals to support the region's diverse manufacturing base.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="../images/north-america-distribution.jpg" alt="North American Distribution" class="img-fluid rounded shadow h-100">
+                </div>
+            </div>
+            
+            <div id="europe" class="row mb-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Europe</h3>
+                            <p>From our headquarters in Geneva, Switzerland, we coordinate European distribution to industrial clients across the continent:</p>
+                            <ul>
+                                <li><strong>Key Markets:</strong> Automotive, engineering, construction, electronics</li>
+                                <li><strong>Distribution Hubs:</strong> Rotterdam, Hamburg</li>
+                                <li><strong>Logistics Infrastructure:</strong> Port facilities, rail connections, warehousing</li>
+                                <li><strong>Client Base:</strong> Manufacturing companies, metal processors, industrial groups</li>
+                            </ul>
+                            <p>Our European network serves clients in Germany, France, Italy, Spain, and Eastern Europe, providing a comprehensive range of metal commodities to support the region's industrial base.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="../images/europe-distribution.jpg" alt="European Distribution" class="img-fluid rounded shadow h-100">
+                </div>
+            </div>
+            
+            <div id="middle-east" class="row mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Middle East</h3>
+                            <p>Our Middle Eastern operations focus on supplying metal commodities to the region's growing industrial base and construction sector:</p>
+                            <ul>
+                                <li><strong>Key Markets:</strong> Construction, infrastructure, manufacturing</li>
+                                <li><strong>Regional Office:</strong> Dubai, UAE</li>
+                                <li><strong>Logistics Infrastructure:</strong> Port facilities, warehousing</li>
+                                <li><strong>Client Base:</strong> Construction companies, industrial groups, government projects</li>
+                            </ul>
+                            <p>We serve clients across the UAE, Saudi Arabia, Qatar, and other Gulf states, providing metals for the region's ambitious construction and infrastructure projects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="../images/middle-east-distribution.jpg" alt="Middle East Distribution" class="img-fluid rounded shadow h-100">
+                </div>
+            </div>
+            
+            <div id="asia" class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Asia</h3>
+                            <p>Our Asian distribution network serves the region's dynamic manufacturing sectors, with a focus on:</p>
+                            <ul>
+                                <li><strong>Key Markets:</strong> Electronics, automotive, construction, manufacturing</li>
+                                <li><strong>Regional Offices:</strong> Singapore, Shanghai</li>
+                                <li><strong>Logistics Infrastructure:</strong> Port facilities, warehousing, distribution centers</li>
+                                <li><strong>Client Base:</strong> Electronics manufacturers, automotive companies, construction firms</li>
+                            </ul>
+                            <p>We supply metal commodities to clients in China, Japan, South Korea, and Southeast Asia, supporting the region's rapid industrial growth and technological advancement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="../images/asia-distribution.jpg" alt="Asian Distribution" class="img-fluid rounded shadow h-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Regional Offices & Representatives</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto mb-5">
+                    <p class="text-center">To support our global operations, Swiss Metal Trading maintains strategic regional offices and representatives in key locations worldwide. These local teams ensure close coordination with suppliers, logistics partners, and clients, while providing deep market knowledge and responsive service.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Geneva Headquarters</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Rue du Rhône 100, 1204 Geneva, Switzerland</p>
+                            <p>Our global headquarters coordinates all aspects of our operations, including trading, risk management, finance, and strategic planning. The Geneva office serves as our central hub for European operations and global administration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Johannesburg Office</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Sandton, Johannesburg, South Africa</p>
+                            <p>Our African operations are coordinated from Johannesburg, where our team manages relationships with mining partners across the continent, oversees quality control, and coordinates logistics for metal commodities sourced from African producers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Santiago Office</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Las Condes, Santiago, Chile</p>
+                            <p>Our South American operations are managed from Santiago, where our team works closely with copper producers in Chile and coordinates with partners in Peru, Bolivia, and Brazil to secure high-quality metal commodities for global distribution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Singapore Office</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Marina Bay, Singapore</p>
+                            <p>Our Singapore office serves as the hub for our Asian operations, coordinating distribution across Southeast Asia and maintaining relationships with clients throughout the region. The team also manages logistics and warehousing for efficient metal commodity distribution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Shanghai Representative</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Pudong, Shanghai, China</p>
+                            <p>Our Shanghai representative office focuses on the Chinese market, working with industrial clients across the country to meet their metal commodity needs. The team provides local market intelligence and client support for this critical market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Dubai Office</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> Dubai International Financial Centre, UAE</p>
+                            <p>Our Dubai office coordinates Middle Eastern operations, serving clients across the Gulf region and managing logistics for metal commodity distribution. The team works closely with construction companies and industrial groups throughout the region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section bg-primary text-white">
+        <div class="container text-center">
+            <h2>Ready to Connect with Our Global Network?</h2>
+            <p class="lead">Contact us to learn how our worldwide operations can support your metal commodity needs.</p>
+            <a href="contact.html" class="btn btn-light btn-lg mt-3">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Swiss Metal Trading</h5>
+                    <p>A premier metal commodity trading company headquartered in Geneva, Switzerland with global operations.</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt mr-2"></i> Geneva, Switzerland<br>
+                        <i class="fas fa-phone mr-2"></i> +41 XX XXX XX XX<br>
+                        <i class="fas fa-envelope mr-2"></i> info@swissmetaltrading.com
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="operations.html">Operations</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Operations</h5>
+                    <ul>
+                        <li><a href="#africa">Africa</a></li>
+                        <li><a href="#south-america">South America</a></li>
+                        <li><a href="#north-america">North America</a></li>
+                        <li><a href="#europe">Europe</a></li>
+                        <li><a href="#asia">Asia</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Languages</h5>
+                    <div class="lang-switcher">
+                        <a href="#" class="active">English</a>
+                        <a href="#">Français</a>
+                        <a href="#">Español</a>
+                    </div>
+                    <h5 class="mt-4">Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 Swiss Metal Trading. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Leaflet JS for interactive map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <!-- Map Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the map
+            var map = L.map('worldMap').setView([20, 0], 2);
+            
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            // Custom icon for headquarters
+            var hqIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#28a745;' class='marker-pin'></div><i class='fa fa-building' style='color: #fff; font-size: 15px;'></i>",
+                iconSize: [30, 42],
+                iconAnchor: [15, 42]
+            });
+            
+            // Custom icon for sourcing regions
+            var sourcingIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#007bff;' class='marker-pin'></div><i class='fa fa-industry' style='color: #fff; font-size: 15px;'></i>",
+                iconSize: [30, 42],
+                iconAnchor: [15, 42]
+            });
+            
+            // Custom icon for distribution hubs
+            var distributionIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#ffc107;' class='marker-pin'></div><i class='fa fa-truck' style='color: #fff; font-size: 15px;'></i>",
+                iconSize: [30, 42],
+                iconAnchor: [15, 42]
+            });
+            
+            // Custom icon for regional offices
+            var officeIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#dc3545;' class='marker-pin'></div><i class='fa fa-briefcase' style='color: #fff; font-size: 15px;'></i>",
+                iconSize: [30, 42],
+                iconAnchor: [15, 42]
+            });
+            
+            // Add markers for headquarters
+            L.marker([46.2044, 6.1432], {icon: hqIcon}).addTo(map)
+                .bindPopup("<b>Headquarters</b><br>Geneva, Switzerland");
+            
+            // Add markers for sourcing regions in Africa
+            L.marker([-11.6876, 27.5026], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Copper & Cobalt Sourcing</b><br>Democratic Republic of Congo");
+                
+            L.marker([-13.1339, 27.8493], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Copper Sourcing</b><br>Zambia");
+                
+            L.marker([10.9408, -10.9408], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Bauxite Sourcing</b><br>Guinea");
+                
+            L.marker([-29.0852, 26.1596], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Manganese & Chrome Sourcing</b><br>South Africa");
+                
+            L.marker([7.9465, -1.0232], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Metal Sourcing</b><br>Ghana");
+            
+            // Add markers for sourcing regions in South America
+            L.marker([-33.4489, -70.6693], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Copper Sourcing</b><br>Chile");
+                
+            L.marker([-9.1900, -75.0152], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Copper & Zinc Sourcing</b><br>Peru");
+                
+            L.marker([-16.2902, -63.5887], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Zinc Sourcing</b><br>Bolivia");
+                
+            L.marker([-14.2350, -51.9253], {icon: sourcingIcon}).addTo(map)
+                .bindPopup("<b>Bauxite Sourcing</b><br>Brazil");
+            
+            // Add markers for distribution hubs
+            L.marker([41.8781, -87.6298], {icon: distributionIcon}).addTo(map)
+                .bindPopup("<b>Distribution Hub</b><br>Chicago, USA");
+                
+            L.marker([29.7604, -95.3698], {icon: distributionIcon}).addTo(map)
+                .bindPopup("<b>Distribution Hub</b><br>Houston, USA");
+                
+            L.marker([51.9244, 4.4777], {icon: distributionIcon}).addTo(map)
+                .bindPopup("<b>Distribution Hub</b><br>Rotterdam, Netherlands");
+                
+            L.marker([53.5511, 9.9937], {icon: distributionIcon}).addTo(map)
+                .bindPopup("<b>Distribution Hub</b><br>Hamburg, Germany");
+            
+            // Add markers for regional offices
+            L.marker([-26.2041, 28.0473], {icon: officeIcon}).addTo(map)
+                .bindPopup("<b>Regional Office</b><br>Johannesburg, South Africa");
+                
+            L.marker([-33.4489, -70.6693], {icon: officeIcon}).addTo(map)
+                .bindPopup("<b>Regional Office</b><br>Santiago, Chile");
+                
+            L.marker([1.3521, 103.8198], {icon: officeIcon}).addTo(map)
+                .bindPopup("<b>Regional Office</b><br>Singapore");
+                
+            L.marker([31.2304, 121.4737], {icon: officeIcon}).addTo(map)
+                .bindPopup("<b>Representative Office</b><br>Shanghai, China");
+                
+            L.marker([25.2048, 55.2708], {icon: officeIcon}).addTo(map)
+                .bindPopup("<b>Regional Office</b><br>Dubai, UAE");
+        });
+    </script>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>

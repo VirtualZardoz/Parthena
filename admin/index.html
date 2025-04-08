@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swiss Metal Trading CMS - Admin Panel">
+    <title>Swiss Metal Trading | Admin Panel</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Swiss Metal Trading</h3>
+                <h4>Admin Panel</h4>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-file-alt"></i> Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#" data-page="edit-home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" data-page="edit-about">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" data-page="edit-operations">Operations</a>
+                        </li>
+                        <li>
+                            <a href="#" data-page="edit-products">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" data-page="edit-global">Global Presence</a>
+                        </li>
+                        <li>
+                            <a href="#" data-page="edit-contact">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-page="media"><i class="fas fa-images"></i> Media</a>
+                </li>
+                <li>
+                    <a href="#" data-page="translations"><i class="fas fa-language"></i> Translations</a>
+                </li>
+                <li>
+                    <a href="#" data-page="settings"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li>
+                    <a href="#" data-page="analytics"><i class="fas fa-chart-bar"></i> Analytics</a>
+                </li>
+                <li>
+                    <a href="#" data-page="users"><i class="fas fa-users"></i> Users</a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a href="../index.html" target="_blank"><i class="fas fa-external-link-alt"></i> View Website</a>
+                <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-auto d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge badge-danger">3</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">New contact form submission</a>
+                                <a class="dropdown-item" href="#">System update available</a>
+                                <a class="dropdown-item" href="#">Backup reminder</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-3">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i> Admin
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-page="profile">Profile</a>
+                                <a class="dropdown-item" href="#" data-page="settings">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" id="logout-dropdown">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard -->
+            <div class="page-content active" id="dashboard-page">
+                <div class="container-fluid">
+                    <h1 class="page-title">Dashboard</h1>
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="card-title">Page Views</h5>
+                                            <h2 class="mb-0">1,254</h2>
+                                            <p class="text-success mb-0"><i class="fas fa-arrow-up"></i> 12% this week</p>
+                                        </div>
+                                        <div class="dashboard-icon">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="card-title">Contact Inquiries</h5>
+                                            <h2 class="mb-0">24</h2>
+                                            <p class="text-success mb-0"><i class="fas fa-arrow-up"></i> 8% this week</p>
+                                        </div>
+                                        <div class="dashboard-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="card-title">Unique Visitors</h5>
+                                            <h2 class="mb-0">876</h2>
+                                            <p class="text-success mb-0"><i class="fas fa-arrow-up"></i> 15% this week</p>
+                                        </div>
+                                        <div class="dashboard-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="card-title">Bounce Rate</h5>
+                                            <h2 class="mb-0">32%</h2>
+                                            <p class="text-danger mb-0"><i class="fas fa-arrow-up"></i> 3% this week</p>
+                                        </div>
+                                        <div class="dashboard-icon">
+                                            <i class="fas fa-chart-pie"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Traffic Overview</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="trafficChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Top Pages</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Home
+                                            <span class="badge badge-primary badge-pill">423</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Products & Commodities
+                                            <span class="badge badge-primary badge-pill">287</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Contact
+                                            <span class="badge badge-primary badge-pill">189</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            About Us
+                                            <span class="badge badge-primary badge-pill">156</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Global Presence
+                                            <span class="badge badge-primary badge-pill">124</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Recent Inquiries</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Company</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John Smith</td>
+                                                    <td>ABC Manufacturing</td>
+                                                    <td>Apr 7, 2025</td>
+                                                    <td><span class="badge badge-warning">Pending</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maria Garcia</td>
+                                                    <td>Global Metals Inc.</td>
+                                                    <td>Apr 6, 2025</td>
+                                                    <td><span class="badge badge-success">Responded</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Robert Chen</td>
+                                                    <td>Eastern Industries</td>
+                                                    <td>Apr 5, 2025</td>
+                                                    <td><span class="badge badge-success">Responded</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sarah Johnson</td>
+                                                    <td>Johnson & Partners</td>
+                                                    <td>Apr 4, 2025</td>
+                                                    <td><span class="badge badge-success">Responded</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">System Status</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Website Status
+                                            <span class="badge badge-success">Online</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            SSL Certificate
+                                            <span class="badge badge-success">Valid (Expires: Mar 15, 2026)</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Database
+                                            <span class="badge badge-success">Connected</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Last Backup
+                                            <span class="badge badge-info">Apr 7, 2025 (01:00 AM)</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            System Updates
+                                            <span class="badge badge-warning">1 Update Available</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Home Page -->
+            <div class="page-content" id="edit-home-page">
+                <div class="container-fluid">
+                    <h1 class="page-title">Edit Home Page</h1>
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="heroTitle">Hero Title</label>
+                                    <input type="text" class="form-control" id="heroTitle" value="Global Metal Commodity Trading Excellence">
+                                </div>
+                                <div class="form-group">
+                                    <label for="heroSubtitle">Hero Subtitle</label>
+                                    <textarea class="form-control" id="heroSubtitle" rows="3">A premier metal commodity trading company headquartered in Geneva, Switzerland, with global operations spanning from Africa and South America to North America, Europe, the Middle East, and Asia.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="heroImage">Hero Background Image</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="heroImage" value="images/hero-bg.jpg" readonly>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Browse</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h4 class="mt-4">Company Overview Section</h4>
+                                <div class="form-group">
+                                    <label for="overviewTitle">Section Title</label>
+                                    <input type="text" class="form-control" id="overviewTitle" value="Company Overview">
+                                </div>
+                                <div class="form-group">
+                                    <label for="overviewText1">Overview Text (Paragraph 1)</label>
+                                    <textarea class="form-control" id="overviewText1" rows="3">Swiss Metal Trading is a leading metal commodity trading company based in Geneva, Switzerland. We specialize in sourcing high-quality metals from producing regions, primarily in Africa and South America, and distributing them to markets across North America, Europe, the Middle East, and Asia.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="overviewText2">Overview Text (Paragraph 2)</label>
+                                    <textarea class="form-control" id="overviewText2" rows="3">With decades of industry experience, we have established a reputation for reliability, integrity, and excellence in the global metal commodities market. Our expertise spans the entire supply chain, from origination to distribution, ensuring seamless operations and consistent quality for our clients worldwide.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="overviewImage">Overview Image</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="overviewImage" value="images/headquarters.jpg" readonly>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Browse</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- More form fields for other sections would go here -->
+                                
+                                <div class="form-group mt-4">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="button" class="btn btn-secondary ml-2">Preview</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other page content sections would go here -->
+            
+            <!-- Settings Page -->
+            <div class="page-content" id="settings-page">
+                <div class="container-fluid">
+                    <h1 class="page-title">Settings</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">General Settings</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="siteName">Site Name</label>
+                                            <input type="text" class="form-control" id="siteName" value="Swiss Metal Trading">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="siteTagline">Tagline</label>
+                                            <input type="text" class="form-control" id="siteTagline" value="Global Metal Commodity Trading Excellence">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="adminEmail">Admin Email</label>
+                                            <input type="email" class="form-control" id="adminEmail" value="admin@swissmetaltrading.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="timezone">Timezone</label>
+                                            <select class="form-control" id="timezone">
+                                                <option selected>Europe/Zurich</option>
+                                                <option>UTC</option>
+                                                <option>America/New_York</option>
+                                                <option>Asia/Singapore</option>
+                                                <option>Africa/Johannesburg</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dateFormat">Date Format</label>
+                                            <select class="form-control" id="dateFormat">
+                                                <option selected>DD/MM/YYYY</option>
+                                                <option>MM/DD/YYYY</option>
+                                                <option>YYYY-MM-DD</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Security Settings</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="sslStatus">SSL Certificate</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="sslStatus" value="Valid (Expires: Mar 15, 2026)" readonly>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" type="button">Renew</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="backupSchedule">Backup Schedule</label>
+                                            <select class="form-control" id="backupSchedule">
+                                                <option>Hourly</option>
+                                                <option selected>Daily</option>
+                                                <option>Weekly</option>
+                                                <option>Monthly</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="backupRetention">Backup Retention (days)</label>
+                                            <input type="number" class="form-control" id="backupRetention" value="30">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="twoFactorAuth" checked>
+                                                <label class="custom-control-label" for="twoFactorAuth">Enable Two-Factor Authentication</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="loginNotifications" checked>
+                                                <label class="custom-control-label" for="loginNotifications">Email Notifications on Login</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">GDPR Compliance</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="cookieConsent" checked>
+                                                <label class="custom-control-label" for="cookieConsent">Enable Cookie Consent Banner</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="privacyPolicy" checked>
+                                                <label class="custom-control-label" for="privacyPolicy">Display Privacy Policy Link</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="dataRetention" checked>
+                                                <label class="custom-control-label" for="dataRetention">Enable Data Retention Controls</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dataRetentionPeriod">Data Retention Period (days)</label>
+                                            <input type="number" class="form-control" id="dataRetentionPeriod" value="365">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Page -->
+            <div class="page-content" id="analytics-page">
+                <div class="container-fluid">
+                    <h1 class="page-title">Analytics</h1>
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Traffic Overview</h5>
+                                    <div>
+                                        <select class="form-control form-control-sm">
+                                            <option>Last 7 Days</option>
+                                            <option selected>Last 30 Days</option>
+                                            <option>Last 90 Days</option>
+                                            <option>Last Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="analyticsTrafficChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Traffic Sources</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="trafficSourcesChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Visitor Demographics</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="visitorDemographicsChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Page Performance</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Page</th>
+                                                    <th>Views</th>
+                                                    <th>Unique Views</th>
+                                                    <th>Avg. Time on Page</th>
+                                                    <th>Bounce Rate</th>
+                                                    <th>Exit Rate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Home</td>
+                                                    <td>1,245</td>
+                                                    <td>987</td>
+                                                    <td>1m 45s</td>
+                                                    <td>32%</td>
+                                                    <td>18%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Products & Commodities</td>
+                                                    <td>876</td>
+                                                    <td>723</td>
+                                                    <td>2m 12s</td>
+                                                    <td>24%</td>
+                                                    <td>15%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contact</td>
+                                                    <td>654</td>
+                                                    <td>542</td>
+                                                    <td>1m 32s</td>
+                                                    <td>18%</td>
+                                                    <td>42%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>About Us</td>
+                                                    <td>543</td>
+                                                    <td>432</td>
+                                                    <td>1m 58s</td>
+                                                    <td>28%</td>
+                                                    <td>22%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Global Presence</td>
+                                                    <td>432</td>
+                                                    <td>365</td>
+                                                    <td>2m 05s</td>
+                                                    <td>26%</td>
+                                                    <td>19%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Operations</td>
+                                                    <td>387</td>
+                                                    <td>312</td>
+                                                    <td>1m 48s</td>
+                                                    <td>29%</td>
+                                                    <td>21%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
